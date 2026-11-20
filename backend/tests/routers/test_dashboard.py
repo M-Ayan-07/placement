@@ -108,7 +108,7 @@ async def test_dashboard_populated_lifecycle(client: AsyncClient):
         await client.post(
             f"/api/v1/interview/{int_session_id}/answer",
             headers=headers,
-            json={"answer": f"Answer for turn {turn}: We analyze time complexity, space complexity, and state algorithmic trade-offs."},
+            json={"answer": f"Answer for turn {turn}: In data structures and algorithms, I analyze time complexity, space complexity, edge cases, and algorithmic trade-offs before selecting the appropriate implementation."},
         )
 
     # 6. Fetch Dashboard Summary

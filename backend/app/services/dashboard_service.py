@@ -101,6 +101,8 @@ async def get_dashboard_summary(db: AsyncSession, user: User) -> DashboardSummar
         + 0.25 * resume_score
         + 0.25 * interview_score
     )
+    if total_tests_completed and resumes and total_interviews_completed:
+        composite += 5
     composite = max(0, min(100, int(composite)))
 
     if composite >= 80:
